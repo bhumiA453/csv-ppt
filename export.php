@@ -60,26 +60,7 @@ $dropdown .= '</select>';
             allowClear: true, // Adds a clear button
             width: "100%" // Adjust the width as needed
         });
-
-        // Get the current page's filename (e.g., "index.php", "about.php", etc.)
-        var currentPage = window.location.href.split("/").slice(-1)[0];
-
-        // Remove the "active" class from all navigation links
-        var navLinks = document.querySelectorAll(".nav-link");
-        navLinks.forEach(function(link) {
-            link.classList.remove("active");
-        });
-        // alert(navLinks);
-        // Add the "active" class to the link that matches the current page
-        var currentNavLink = document.getElementById(currentPage.replace(".php", "-link"));
-        // alert(currentNavLink);
-        if (currentNavLink) {
-            currentNavLink.classList.add("active");
-        }
     });
-</script>
-<script>
-
 </script>
 
 <?php

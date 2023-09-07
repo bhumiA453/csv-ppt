@@ -5,18 +5,18 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" id="export" href="export.php">Export</a>
+                <a class="nav-link active" id="export-link" href="export.php">Export</a>
             </li>
             <?php if($role != 2) { ?>
             <li class="nav-item">
-                <a class="nav-link" id="add_user" href="add_user.php">Add User</a>
+                <a class="nav-link" id="add_user-link" href="add_user.php">Add User</a>
             </li>
             <?php } ?>
             <li class="nav-item">
-                <a class="nav-link" id="guide-link" href="index.php">Guide</a>
+                <a class="nav-link" id="guide-link" href="guide.php">Guide</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="guide-link" href="logout.php">Logout</a>
+                <a class="nav-link" id="logout-link" href="logout.php">Logout</a>
             </li>
         </ul> 
 

@@ -61,27 +61,6 @@ unset($_SESSION['errorMessage']);
     </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        // Get the current page's filename (e.g., "index.php", "about.php", etc.)
-        var currentPage = window.location.href.split("/").slice(-1)[0];
-
-        // Remove the "active" class from all navigation links
-        var navLinks = document.querySelectorAll(".nav-link");
-        navLinks.forEach(function(link) {
-            link.classList.remove("active");
-        });
-
-        // Add the "active" class to the link that matches the current page
-        var currentNavLink = document.getElementById(currentPage.replace(".php", "-link"));
-        if (currentNavLink) {
-            currentNavLink.classList.add("active");
-        }
-    });
-    
-</script>
-
-
 <?php
 include('templates/footer.php'); // Include the footer
 ?>
