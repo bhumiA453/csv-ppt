@@ -31,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['errorMessage'] = "Email already registered.";
     } else {
         // Insert user data into the database
-        $sql = "INSERT INTO user (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO user (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $first_name, $last_name, $email, $password, $role);
+        $stmt->bind_param("sssss", $first_name, $last_name, $email, $password, $role);
 
         if ($stmt->execute()) {
             // echo "User added successful!";
