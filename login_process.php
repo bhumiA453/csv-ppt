@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user_id"] = $row["id"];
             $_SESSION["user_email"] = $row["email"];
             $_SESSION["user_role"] = $row["role"];
-            header("Location: export.php");
+            header("Location: home.php");
             exit();
         } else {
             $_SESSION["login_error"] = "Invalid email or password.";
@@ -42,6 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 
-header("Location: login.php");
+header("Location: index.php");
 exit();
 ?>

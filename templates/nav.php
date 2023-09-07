@@ -5,7 +5,7 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" id="export-link" href="export.php">Export</a>
+                <a class="nav-link active" id="home-link" href="home.php">Home</a>
             </li>
             <?php if($role != 2) { ?>
             <li class="nav-item">
