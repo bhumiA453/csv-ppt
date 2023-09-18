@@ -1,3 +1,4 @@
+<body class="login-bg login-page">
 <?php
 session_start();
 include('templates/header.php'); 
@@ -8,35 +9,37 @@ $errorMessage = isset($_SESSION['login_error']) ? $_SESSION['login_error'] : '';
 // Unset the messages from the session to display them only once
 unset($_SESSION['login_error']);
 ?>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Login</div>
-                    <div class="card-body">
-                        <?php
-                        // Display the error message if it exists
-                        
-                        if (isset($errorMessage) && $errorMessage != '') {
-                            echo '<div class="alert alert-danger mt-3">' . $errorMessage . '</div>';
-                        }
-                        ?>
-                        <form method="post" action="login_process.php">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <a href="" class="h1"><img src="https://dev.brand-scapes.com/hotstar/public/dist/img/hotstar.png" alt="Brandscapes Worldwide" width="100%"></a>
         </div>
+        <div class="card-body">
+            <h3 class="login-box-msg">Sign In</h3>
+            <?php
+            // Display the error message if it exists
+            if (isset($errorMessage) && $errorMessage != '') {
+                echo '<div class="alert alert-danger mt-3">' . $errorMessage . '</div>';
+            }
+            ?>
+            <form action="login_process.php" method="post">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Hotstar Email id" name="email" id="email">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+                </div>
+        
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+        </div>
+        <!-- /.card-body -->
     </div>
+    <!-- /.card -->
+</div>
+
+    
 <?php
 include('templates/footer.php'); // Include the footer
 ?>

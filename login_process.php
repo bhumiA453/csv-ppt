@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Password is correct; set user session and redirect to dashboard
             $_SESSION["user_id"] = $row["id"];
             $_SESSION["user_email"] = $row["email"];
+            $_SESSION["user_name"] = $row["first_name"]." ".$row["last_name"] ;
             $_SESSION["user_role"] = $row["role"];
             header("Location: home.php");
             exit();
