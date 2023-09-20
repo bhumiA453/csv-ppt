@@ -16,8 +16,17 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
     <script>
-    /*$(document).ready(function() {
-        // Get the current page's filename (e.g., "index.php", "about.php", etc.)
+
+        
+
+    $(document).ready(function() {
+
+        $('#menu-list li').click(function() {
+            // alert('hi');
+            $('tooltip_nav li.active').removeClass('active');
+            $(this).addClass('active');
+        });
+        /*// Get the current page's filename (e.g., "index.php", "about.php", etc.)
         var currentPage = window.location.href.split("/").slice(-1)[0];
         // alert(currentPage);
         // Remove the "active" class from all navigation links
@@ -31,8 +40,8 @@
         // alert(currentNavLink);
         if (currentNavLink) {
             currentNavLink.classList.add("active");
-        }
-    });*/
+        }*/
+    });
     
 </script>
 </head>

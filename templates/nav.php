@@ -22,7 +22,7 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
                 </div> -->
         </header>
         <div class="leftMenu">
-            <ul class="leftMenuList">
+            <ul class="leftMenuList" id="menu-list">
                 <li class="active tooltip_nav point01">
                     <a href="home.php">
                     <i class="fa fa-dashboard" aria-hidden="true"></i>
@@ -46,13 +46,6 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
                     <p>Guide</p>
                     </a>
                 </li>
-                <!-- <li class="tooltip_nav point04">
-                    <a href="logout.php">
-                    <i class="fa fa-gear" aria-hidden="true"></i>
-                    <span>Settings</span>
-                    <p>Settings</p>
-                    </a>
-                </li> -->
             </ul>
         </div>
     <!-- </div> -->

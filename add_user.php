@@ -12,7 +12,6 @@ unset($_SESSION['successMessage']);
 unset($_SESSION['errorMessage']);
 
 ?>
-
 <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -54,17 +53,20 @@ unset($_SESSION['errorMessage']);
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
+                            
                             <div class="col-md-12 mb-3">
-                                <label>Role</label><br>
-                                <!-- <div class="col-md-6"> -->
-                                <input type="radio" id="role_admin" name="role" value="1" required>
-                                <label for="role_admin">Admin</label>
-                                <!-- </div>
-                                <div class="col-md-6"> -->
-                                <input type="radio" id="role_user" name="role" value="2" required>
-                                <label for="role_user">User</label>
-                                <!-- </div> -->
+                                <label>Role:</label>
+                                <div class="form-check form-check-inline custom-radio">
+                                    <input class="form-check-input custom-control-input" type="radio" id="role_admin" name="role" value="admin" required>
+                                    <label class="form-check-label custom-control-label" for="role_admin">  Admin</label>
+                                </div>
+
+                                <div class="form-check form-check-inline custom-radio">
+                                    <input class="form-check-input custom-control-input" type="radio" id="role_user" name="role" value="user" required>
+                                    <label class="form-check-label custom-control-label" for="role_user">  User</label>
+                                </div>
                             </div>
+
                             <button type="submit" class="btn btn-primary">Add</button>
                                 
                             </form>
@@ -78,7 +80,13 @@ unset($_SESSION['errorMessage']);
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
 
+<script type="text/javascript">
+    // JavaScript/jQuery to make radio buttons round
+$(document).ready(function() {
+    $('input[type="radio"]').addClass('custom-radio-input');
+});
 
+</script>
 <?php
 include('templates/footer.php'); // Include the footer
 ?>

@@ -6,7 +6,8 @@
                 <?php if($role == 1){ ?>
                 <span class="">Admin</span>
                 <?php } ?>
-                <button id="logoutButton">Logout</button>
+                <br>
+                <button class="btn btn-primary" id="logoutButton">Logout</button>
                 <!-- <h1><a href="logout.php">LogOut</a></h1>  -->
             </div>
       </div>
