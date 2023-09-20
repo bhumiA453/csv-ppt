@@ -21,16 +21,16 @@
 
     $(document).ready(function() {
 
-        $('#menu-list li').click(function() {
+        /*$('#menu-list li').click(function() {
             // alert('hi');
             $('tooltip_nav li.active').removeClass('active');
             $(this).addClass('active');
-        });
-        /*// Get the current page's filename (e.g., "index.php", "about.php", etc.)
+        });*/
+        // Get the current page's filename (e.g., "index.php", "about.php", etc.)
         var currentPage = window.location.href.split("/").slice(-1)[0];
         // alert(currentPage);
         // Remove the "active" class from all navigation links
-        var navLinks = document.querySelectorAll(".nav-link");
+        var navLinks = document.querySelectorAll(".tooltip_nav");
         navLinks.forEach(function(link) {
             link.classList.remove("active");
         });
@@ -40,7 +40,7 @@
         // alert(currentNavLink);
         if (currentNavLink) {
             currentNavLink.classList.add("active");
-        }*/
+        }
     });
     
 </script>

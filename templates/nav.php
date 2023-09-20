@@ -23,7 +23,7 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
         </header>
         <div class="leftMenu">
             <ul class="leftMenuList" id="menu-list">
-                <li class="active tooltip_nav point01">
+                <li class="active tooltip_nav point01" id="home-link">
                     <a href="home.php">
                     <i class="fa fa-dashboard" aria-hidden="true"></i>
                     <span>Dashboard</span>
@@ -31,7 +31,7 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
                     </a>
                 </li>
                 <?php if($role != 2) { ?>
-                <li class="tooltip_nav point02">
+                <li class="tooltip_nav point02" id="add_user-link">
                     <a href="add_user.php">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <span>Add User</span>
@@ -39,7 +39,7 @@ $role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : '2';
                     </a>
                 </li>
                 <?php } ?>
-                <li class="tooltip_nav point03">
+                <li class="tooltip_nav point03" id="guide-link">
                     <a href="guide.php">
                     <i class="fa fa-file" aria-hidden="true"></i>
                     <span>Guide</span>
